@@ -23,7 +23,7 @@ export function Services() {
   ]
 
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-20 items-start">
           <motion.div

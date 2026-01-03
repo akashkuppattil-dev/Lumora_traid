@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone, Linkedin, MessageCircle } from "lucide-react"
 
 export function ContactForm() {
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

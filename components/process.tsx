@@ -24,7 +24,7 @@ export function Process() {
   ]
 
   return (
-    <section id="process" className="py-24 bg-background relative overflow-hidden">
+    <section id="process" className="py-24 relative overflow-hidden">
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -35,7 +35,7 @@ export function Process() {
           viewport={{ once: true, margin: "-100px" }}
           className="flex items-center gap-4 mb-16"
         >
-          <span className="text-[10px] font-black tracking-[0.2em] text-muted-foreground uppercase bg-white border border-border px-4 py-1.5 rounded-full shadow-sm">
+          <span className="text-[10px] font-black tracking-[0.2em] text-muted-foreground uppercase bg-muted/20 border border-border px-4 py-1.5 rounded-full shadow-sm">
             Our Process
           </span>
           <h2 className="text-4xl md:text-7xl font-serif">Working process</h2>
