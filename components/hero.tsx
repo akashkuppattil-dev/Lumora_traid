@@ -39,11 +39,6 @@ export function Hero() {
   return (
     <section ref={containerRef} className="relative h-[400vh] bg-background">
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        {/* Header - Stays inside sticky container, so it scrolls away only after 400vh */}
-        <div className="absolute top-0 left-0 right-0 z-50">
-          <Header />
-        </div>
-
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -156,6 +151,11 @@ export function Hero() {
               <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
             </div>
           </motion.div>
+        </div>
+
+        {/* Header - Stays inside sticky container, so it scrolls away after the hero section */}
+        <div className="absolute top-0 left-0 right-0 z-[100]">
+          <Header />
         </div>
       </div>
     </section>

@@ -7,16 +7,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   const navItems = [
     { name: "HOME", href: "/" },
@@ -27,13 +18,15 @@ export function Header() {
   ]
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 p-6 pointer-events-none">
-      <div className="container mx-auto relative h-20 flex items-center justify-between pointer-events-auto">
+    <motion.header
+      className="absolute top-0 left-0 right-0 z-[100] p-8 bg-background/1 backdrop-blur-[2px]"
+    >
+      <div className="container mx-auto relative h-20 flex items-center justify-between">
 
         {/* Logo Section */}
         <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="group">
           <div className="flex flex-col items-center">
-            <img src="/logo.svg" alt="Lumora" className="h-49 w-auto brightness-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
+            <img src="/logo.svg" alt="Lumora" className="h-45 w-auto brightness-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
           </div>
         </Link>
 
@@ -137,6 +130,6 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   )
 }
