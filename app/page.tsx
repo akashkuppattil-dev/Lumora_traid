@@ -1,10 +1,10 @@
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { IntroSection } from "@/components/intro-section"
+import { ContactForm } from "@/components/contact-form"
 import { FeaturesBento } from "@/components/features-bento"
-import { Testimonials } from "@/components/testimonials"
-import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
+import { Hero } from "@/components/hero"
+import { Process } from "@/components/process"
+import { Services } from "@/components/services"
+import { Testimonials } from "@/components/testimonials"
 
 export default function Home() {
   return (
